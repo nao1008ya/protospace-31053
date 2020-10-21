@@ -61,3 +61,8 @@ gem 'pry-rails'
 # Active Storage作成の為
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+# Heroku設定
+group :production do
+  gem 'rails_12factor'
+end

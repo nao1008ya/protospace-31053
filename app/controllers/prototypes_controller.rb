@@ -27,7 +27,7 @@ class PrototypesController < ApplicationController
     # その為、インスタンス変数である@つける
     
     # 投稿者以外のユーザーが、投稿者専用のページに遷移できないように
-    if user_signed_in?
+    unless @prototype.user.id == current_user.id
       redirect_to action: :index
     end
   end
